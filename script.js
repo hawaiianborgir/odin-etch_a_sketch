@@ -21,13 +21,20 @@ function color(max = 256) {
 
 function hoverEffect() {
     const pixels = document.querySelectorAll(".pixel");
+    const increment = 0.1;
     pixels.forEach((item) => {
         item.addEventListener("mouseover", (e) => {
-            item.style.backgroundColor = `black`;
 
             //color options
             // item.style.backgroundColor = `black`;
             item.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
+
+            //opacity increment
+            if (item.style.opacity == "") {
+                item.style.opacity = `${increment}`;
+            } else if (Number.isFinite(parseFloat(item.style.opacity))) {
+                item.style.opacity = `${parseFloat(item.style.opacity) + increment}`;
+            }
         })
     });
 }
