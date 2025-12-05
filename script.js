@@ -43,14 +43,20 @@ pixelCreation(25);
 hoverEffect();
 
 
-const btn = document.querySelector(".canvas-btn");
+const btn = document.querySelector(".grid-btn");
 btn.addEventListener("click", (e) => {
-    const size = parseInt(prompt(
-        "How many pixels do you want your canvas to be? (Max: 100)"
+    let size = parseInt(prompt(
+        "How many squares per side should the grid have? (Max: 100)"
     ));
 
     container.innerHTML = "";
 
-    pixelCreation(size);
-    hoverEffect()
+    if (size > 100) {
+        alert("The maximum grid size is 100 squares per side.\nPlease reset the grid again with the correct size.")
+    } else {
+        pixelCreation(size);
+        hoverEffect()
+    }
+
+
 })
