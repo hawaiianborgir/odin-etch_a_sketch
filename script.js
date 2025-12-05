@@ -14,3 +14,12 @@ function pixelCreation(size) {
         container.appendChild(pixel);
     }
 }
+
+function hoverEffect() {
+    const pixels = document.querySelectorAll(".pixel");
+    pixels.forEach((item) => {
+        item.addEventListener("mouseover", (e) => {
+            item.style.backgroundColor = `black`;
+        })
+    });
+}
