@@ -15,11 +15,19 @@ function pixelCreation(size) {
     }
 }
 
+function color(max = 256) {
+    return Math.floor(Math.random()*max);
+};
+
 function hoverEffect() {
     const pixels = document.querySelectorAll(".pixel");
     pixels.forEach((item) => {
         item.addEventListener("mouseover", (e) => {
             item.style.backgroundColor = `black`;
+
+            //color options
+            // item.style.backgroundColor = `black`;
+            item.style.backgroundColor = `rgb(${color()}, ${color()}, ${color()})`;
         })
     });
 }
