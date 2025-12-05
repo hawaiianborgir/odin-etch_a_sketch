@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
-container.style.width = `800px`;
-container.style.height = `800px`;
+container.style.width = `700px`;
+container.style.height = `700px`;
 container.style.display = "flex";
 container.style.flexWrap = "wrap";
 
@@ -9,8 +9,8 @@ function pixelCreation(size) {
         const pixel = document.createElement("div");
         pixel.className = "pixel"
         pixel.style.border = "1px solid #ccc"
-        pixel.style.width = `${800/size}px`
-        pixel.style.height = `${800/size}px`
+        pixel.style.width = `${700/size}px`
+        pixel.style.height = `${700/size}px`
         container.appendChild(pixel);
     }
 }
